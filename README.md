@@ -1,105 +1,132 @@
-# Low-Level Design (LLD) – End-to-End Preparation (Python)
+# Low-Level Design (LLD) — Interview Preparation (Python)
 
-This repository contains a **complete, structured implementation of Low-Level Design (LLD)** concepts using **Python**, built with **product-based company interview expectations** in mind.
+This repository contains a curated collection of **Low-Level Design (LLD) case studies** implemented in **Python**, created specifically for **product-based company LLD interviews**.
 
-The focus is on **design clarity, extensibility, testability, and clean abstractions**, not on frameworks or boilerplate.
-
----
-
-## 🎯 What This Repository Covers
-
-### 1️⃣ Core OOP Fundamentals
-- Encapsulation
-- Abstraction
-- Inheritance
-- Polymorphism
-- Composition vs Inheritance
-- Dependency Injection
+The focus is on **design clarity, extensibility, testability, and clean abstractions**, not on frameworks, databases, or infrastructure.
 
 ---
 
-### 2️⃣ SOLID Principles (Applied Together)
-- Single Responsibility Principle (SRP)
-- Open/Closed Principle (OCP)
-- Liskov Substitution Principle (LSP)
-- Interface Segregation Principle (ISP)
-- Dependency Inversion Principle (DIP)
+## 🎯 Purpose of This Repository
 
-Each principle is demonstrated using:
-- Real-world examples
-- Common interview pitfalls
-- Correct refactored designs
+- Practice **real interview-style LLD problems**
+- Apply **OOP, SOLID principles, and design patterns** correctly
+- Learn **when to use patterns — and when not to**
+- Build confidence in **explaining design decisions clearly**
 
----
-
-### 3️⃣ Design Patterns (Practical Use)
-- Creational: Factory, Builder
-- Structural: Adapter, Facade
-- Behavioral: Strategy, Observer
-
-Patterns are used **only where they add value**, avoiding over-engineering.
-
----
-
-### 4️⃣ Real-World LLD Case Studies
-Interview-relevant design problems such as:
-- Notification System
-- Parking Lot System
-- Payment System
-- File Storage System
-- Rate Limiter
-- LRU Cache
-
-Each problem includes:
-- Requirement breakdown
-- Class-level design
-- Clean, extensible code
-- Discussion of trade-offs
+This repository is **not a tutorial dump** — each case study is intentionally scoped, implemented, tested, and then frozen.
 
 ---
 
 ## 🧠 Design Philosophy
 
 - Favor **composition over inheritance**
-- Depend on **abstractions, not implementations**
-- Avoid large `if-else` blocks
-- Write code that is **easy to extend and test**
-- Optimize for **readability and maintainability**
+- Depend on **abstractions, not concrete implementations**
+- Keep entry points thin, move logic to service layers
+- Avoid large `if-else` blocks and rigid class hierarchies
+- Apply design patterns **only when they add value**
+- Optimize for **readability, extensibility, and testability**
 
 ---
 
-## 🧪 Testing & Extensibility
+## 📦 Repository Structure
 
-- All designs support dependency injection
-- Mock implementations are easy to plug in
-- New features can be added without modifying stable code
+LLD/
+├── README.md # Global overview (this file)
+│
+├── booking-system/ # Completed LLD case study
+│ ├── README.md # Detailed case-study documentation
+│ ├── booking/
+│ ├── payment/
+│ ├── notification/
+│ ├── factory/
+│ ├── service/
+│ ├── booking_state/
+│ └── tests/
+│
+├── parking-lot/ # Next LLD case study (in progress)
+│ └── README.md
+
+
+Each case study is **self-contained**, with its own README explaining:
+- Requirements
+- Design decisions
+- Applied patterns
+- Trade-offs
+
+---
+
+## 🧩 Case Studies
+
+### ✅ Booking System (Completed)
+A complete LLD case study demonstrating:
+- Strategy & Factory for behavior and object creation
+- Service layer for orchestration
+- Observer for event-driven notifications
+- Adapter for third-party integration
+- Decorator (prepared, not forced)
+- State pattern (isolated lifecycle modeling)
+- Behavior-focused unit testing
+
+📄 **Details:**  
+👉 [`booking-system/README.md`](booking-system/README.md)
+
+---
+
+### 🚧 Parking Lot System (Upcoming)
+A classic LLD interview problem focused on:
+- Entity modeling
+- State transitions
+- Rule enforcement
+- Capacity management
+- Pricing strategies
+
+(Status: in progress)
+
+---
+
+## 🧪 Testing Approach
+
+- Tests focus on **behavior and orchestration**, not implementation details
+- Service layer tested end-to-end using dummy collaborators
+- External dependencies are isolated
+- Design supports testing without refactoring
 
 ---
 
 ## 🎤 Interview Perspective
 
-This repository is built to help answer:
-- “Why did you choose this design?”
-- “How would you extend this system?”
-- “What trade-offs did you consider?”
+This repository is designed to help answer interview questions such as:
+- *Why did you choose this design?*
+- *How would you extend this system?*
+- *Which trade-offs did you consider?*
+- *Where would you apply a pattern, and why not earlier?*
 
-Every design is written with **interview explanation clarity** in mind.
-
----
-
-## 🚀 Who Is This For?
-
-- Engineers preparing for **LLD interviews**
-- Developers strengthening OOP & design skills
-- Candidates targeting **product-based companies**
-- Anyone aiming for clean, scalable code design
+Each case study is built with **explanation clarity** in mind.
 
 ---
 
 ## 📌 Scope Disclaimer
-This repository focuses on **low-level design** and **does not cover high-level system design (HLD)** such as distributed systems or scalability patterns.
+
+This repository focuses strictly on **Low-Level Design**.
+
+It intentionally excludes:
+- Databases
+- Concurrency and multithreading
+- APIs and UI layers
+- Framework-specific code
+- High-Level System Design (HLD) concerns
 
 ---
 
-## 🧠 Author
-Built as part of a structured and disciplined LLD learning journey.
+## 🏁 Status
+
+- Booking System: **Complete and frozen**
+- Parking Lot System: **Next case study**
+
+This repository evolves **case study by case study**, not via incremental feature creep.
+
+---
+
+## 🧠 Author Note
+
+Built as part of a disciplined and interview-focused LLD preparation journey, emphasizing **correct design thinking over pattern memorization**.

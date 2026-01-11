@@ -8,10 +8,11 @@ class MovieBooking(Booking):
         self.total_price = 0
 
     def validate(self):
-        if self.seats < 0:
-            raise ValueError("Seats cannot be negative")
-        if self.price < 0:
-            raise ValueError("Price cannot be negative")
+        if self.seats <= 0:
+            raise ValueError("Seats must be greater than zero")
+        if self.price <= 0:
+            raise ValueError("Price must be greater than zero")
+
 
     def calculate_total_price(self):
         self.total_price = self.price * self.seats
